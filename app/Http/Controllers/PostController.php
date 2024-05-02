@@ -16,7 +16,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('index',compact('posts'));
+        return view('backend.home',compact('posts'));
     }
     
     /**
@@ -24,7 +24,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('backend.CRUDPost.createPost');
+        // return view('test.create');
     }
 
     /**
@@ -63,7 +64,7 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        return view('show',compact('post'));
+        return view('backend.CRUDPost.detailPost',compact('post'));
     }
 
     /**
@@ -72,7 +73,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        return view('edit',compact('post'));
+        return view('backend.CRUDPost.editPost',compact('post'));
     }
 
     /**
