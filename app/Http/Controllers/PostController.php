@@ -34,9 +34,8 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $description = $request->description;
-
         $dom = new DOMDocument();
-        $dom->loadHTML($description,9);
+        $dom->loadHTML('<?xml encoding="utf-8" ?>' . $description);
 
         $images = $dom->getElementsByTagName('img');
 
@@ -49,7 +48,7 @@ class PostController extends Controller
             $img->setAttribute('src',$image_name);
         }
         $description = $dom->saveHTML();
-
+        
         Post::create([
             'postTitle' => $request->title,
             'postContent' => $description,
@@ -87,7 +86,7 @@ class PostController extends Controller
         $description = $request->description;
 
         $dom = new DOMDocument();
-        $dom->loadHTML($description,9);
+        $dom->loadHTML('<?xml encoding="utf-8" ?>' . $description);
 
         $images = $dom->getElementsByTagName('img');
 
