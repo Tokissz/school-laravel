@@ -51,11 +51,12 @@ class PostController extends Controller
         $description = $dom->saveHTML();
 
         Post::create([
-            'title' => $request->title,
-            'description' => $description
+            'postTitle' => $request->title,
+            'postContent' => $description,
+            'postBy' => 'admin'
         ]);
 
-        return redirect('/');
+        return redirect('/backend');
     }
 
     /**
@@ -107,11 +108,12 @@ class PostController extends Controller
         $description = $dom->saveHTML();
 
         $post->update([
-            'title' => $request->title,
-            'description' => $description
+            'postTitle' => $request->title,
+            'postContent' => $description,
+            'postBy' => 'admin2',
         ]);
 
-        return redirect('/');
+        return redirect('/backend');
 
     }
 
@@ -123,7 +125,7 @@ class PostController extends Controller
         $post = Post::find($id);
         
         $dom= new DOMDocument();
-        $dom->loadHTML($post->description,9);
+        $dom->loadHTML($post->postContent,9);
         $images = $dom->getElementsByTagName('img');
 
         foreach ($images as $key => $img) {

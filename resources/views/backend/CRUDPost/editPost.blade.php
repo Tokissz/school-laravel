@@ -4,27 +4,48 @@
     <div class="row justify-content-md-center">
         <div class="col-md-12">
             <div class="text-center">
-                <h1 class="">Summernote Text Editor CRUD and Image Upload in Laravel</h1>
+                <h1 class="">แก้ไขกิจกรรมโรงเรียน</h1>
             </div>
             <form action="/update/{{ $post->id }}" method="post">
                 @csrf
-                <label for="">Title:</label>
-                <input type="text" class="form-control" name="title" value="{{ $post->title }}">
-                <label for="">Description:</label>
-                <textarea name="description" id="description" cols="30" rows="10">{{ $post->description }}</textarea>
-                <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+                <label for="">หัวข้อ : </label>
+                <input type="text" class="form-control" name="title" value="{{ $post->postTitle }}">
+
+                <label for="">เนื้อหา : </label>
+                <textarea name="description" id="description" cols="30" rows="10">{{ $post->postContent }}</textarea>
+               
+                <br>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-primary">ยืนยัน</button>
+                    <a  href="/backend" class="btn btn-danger">ย้อนกลับ</a>
+                </div>
             </form>
 
         </div>
     </div>
 </div>
 
+<script src="{{ asset('assets/summernote/lang/summernote-th-TH.js')}}"></script>
 
 <script>
 $('#description').summernote({
-    placeholder: 'description...',
-    tabsize: 2,
-    height: 300
+        lang: 'th-TH',
+        placeholder: 'description...',
+        tabsize: 2,
+        height: 300,                 // set editor height
+        minHeight: null,             // set minimum height of editor
+        maxHeight: null,             // set maximum height of editor
+        focus: true,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ] 
 });
 </script>
 @include('backend.back-script')

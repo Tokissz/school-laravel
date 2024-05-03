@@ -1,8 +1,8 @@
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <a href="index.php" class="logo me-auto"><img src="{{asset('img/logo-1.png')}}" alt="" class="img-fluid"></a>
-      <h1 class="logo me-auto"><a href="index.php"></a></h1>
+      <a href="/" class="logo me-auto"><img src="{{asset('img/logo-1.png')}}" alt="" class="img-fluid"></a>
+      <h1 class="logo me-auto"><a href="/"></a></h1>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">หน้าแรก</a></li>
@@ -39,7 +39,7 @@
                 </ul>
             </ul>
           </li>
-          <li><a class="nav-link scrollto " href="news.php">ข่าวสารและกิจกรรม</a></li>
+          <li><a class="nav-link scrollto " href="news">ข่าวสารและกิจกรรม</a></li>
           <li class="dropdown"><a href="#"><span>แบบฟอร์ม</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">สำหรับนักเรียน</a></li>

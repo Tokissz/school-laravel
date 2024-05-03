@@ -4,7 +4,6 @@
 
     <title>Dashboard - SB Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
 
@@ -13,13 +12,16 @@
     <link rel="stylesheet" href="{{ asset('assets/css/swc.css') }}">
 
     <!-- include libraries(jQuery, bootstrap) -->
-    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
-    <script src="{{ asset('assets/js/jquery-3.7.1.min.js')}}"></script>
-    <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-3.5.1.min.js')}}" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
 
     <!-- include summernote css/js -->
-    <link rel="stylesheet" href="{{ asset('assets/summernote/summernote.min.css') }}">
-    <script src="{{ asset('assets/summernote/summernote.min.js')}}"></script>
+    <link href="{{ asset('assets/summernote/summernote-bs4.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('assets/summernote/summernote-bs4.min.js')}}"></script>
+
 </head>
 
 <body class="sb-nav-fixed">
