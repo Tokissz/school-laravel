@@ -24,33 +24,36 @@
 					<img src="{{ asset('assets/img/img-01.png') }}"alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="process/login-process.php" method="POST">
+				<form class="login100-form validate-form" action="{{ route('login') }}" method="POST">
+					@csrf
 					<span class="login100-form-title">
 						Admin Login
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="username_account" placeholder="Username" required>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
+			
+						<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+							<input class="input100" type="email" name="email" placeholder="name@example.com" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Password is required">
+							<input class="input100" type="password" name="password" placeholder="Password" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-lock" aria-hidden="true"></i>
+							</span>
+						</div>
+	
+						<div class="container-login100-form-btn">
+							<button type='submit' class="login100-form-btn" value="login">
+								Login
+							</button>
+						</div>
+						
+					</form>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="password_account" placeholder="Password" required>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" value="ggg">
-							Login
-						</button>
-					</div>
-				</form>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="/backend">Test</a>
+    <a class="navbar-brand ps-3" href="/home">Test</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -29,7 +29,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading"></div>
-                    <a class="nav-link" href="/backend">
+                    <a class="nav-link" href="/home">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         หน้าแรก
                     </a>
@@ -92,9 +92,19 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                         Charts
                     {{-- </a> --}}
-                     <a class="nav-link" href="tables.html">
+
+                    <form action="{{ route('logout') }}" method="POST" id="logout" >
+                        @csrf
+                        @method('DELETE')
+                        <a class="nav-link" id="Logout">
+                            <div class="sb-nav-link-icon" ><i class="fas fa-arrow"></i></div>
+                            ออกจากระบบ
+                        </a>  
+                    </form>
+                     
+                    <a class="nav-link" href="/register">
                         <div class="sb-nav-link-icon"><i class="fas fa-arrow"></i></div>
-                        ออกจากระบบ
+                        เพิ่มสมาชิก
                     </a>  
                 </div>
             </div>
@@ -104,3 +114,8 @@
             </div>
         </nav>
     </div>
+<script>
+    document.getElementById("Logout").onclick = function() {
+        document.getElementById("logout").submit();
+    }
+</script>

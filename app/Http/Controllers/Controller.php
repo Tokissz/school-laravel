@@ -22,9 +22,6 @@ class Controller extends BaseController
     {
         return view('bill-temp');
     }
-    public function login()
-    {
-        return view('login');
-    }
+    
     
 }
