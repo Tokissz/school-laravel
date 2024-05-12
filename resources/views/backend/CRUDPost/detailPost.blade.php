@@ -2,7 +2,7 @@
 
 <div class="container p-4 ">
     <div class="row justify-content-start">
-        <a href="/backend"><h1><i class="fas fa-angle-left">ย้อนกลับ</i></h1></a>
+        <a href="/posts"><h1><i class="fas fa-angle-left">ย้อนกลับ</i></h1></a>
     </div>
     <div class="row justify-content-md-center">
         <div class="col-md-12">
@@ -10,6 +10,12 @@
                 <h3 class="text-center">{{ $post->postTitle }}</h3>
                 <hr>
             </div>
+            <br>
+                <label for="">รูปภาพปก : </label>
+               <img src="{{ asset('upload/imgCover/'.$post->postCover) }} " width="300" height="200">
+            <br>
+            <br>
+            <label for="">เนื้อหา : </label>
             <div>
                 {!! $post->postContent !!}
             </div>

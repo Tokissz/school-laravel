@@ -4,21 +4,21 @@
     <div class="row justify-content-md-center">
         <div class="col-md-12">
             <div class="text-center">
-                <h1 class="">แก้ไขกิจกรรมโรงเรียน</h1>
+                <h1 class="">แก้ไขประชาสัมพันธ์</h1>
             </div>
-            <form action="/update/{{ $post->id }}" method="post">
+            <form action="/update/{{ $infos->id }}" method="post">
                 @csrf
                 <label for="">หัวข้อ : </label>
-                <input type="text" class="form-control" name="title" value="{{ $post->postTitle }}">
+                <input type="text" class="form-control" name="title" value="{{ $infos->infoTitle }}">
 
                 <label for="">เนื้อหา : </label>
-                <textarea name="description" id="description" cols="30" rows="10">{{ $post->postContent }}</textarea>
+                <textarea name="description" id="description" cols="30" rows="10">{{ $infos->infoContent }}</textarea>
                
                 <br>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="submit" class="btn btn-primary">ยืนยัน</button>
-                    <a  href="/posts" class="btn btn-danger">ย้อนกลับ</a>
+                    <a  href="/info" class="btn btn-danger">ย้อนกลับ</a>
                 </div>
             </form>
 

@@ -1,9 +1,9 @@
 @include('backend.back-header')
 
 <div class="container-fluid px-4">
-    <h1 class="mt-4">กิจกรรมโรงเรียน</h1>
+    <h1 class="mt-4">ประชาสัมพันธ์</h1>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="/create" class="btn btn-md btn-primary">เพิ่มกิจกรรมโรงเรียน</a>
+        <a href="/createInfo" class="btn btn-md btn-primary">เพิ่มประชาสัมพันธ์</a>
     </div>
    
     <table class="table table-striped">
@@ -17,18 +17,17 @@
         <tbody>
 
             
-            @foreach ($posts as $post)
+            @foreach ($infos as $info)
             <tr>
                 <th scope="row">{{  $loop->iteration }}</th>
-                <td>{{ $post->postTitle }}</td>
+                <td>{{ $info->infoTitle }}</td>
                 <td>
-                    <a href="show/post/{{ $post->id }}" class="btn btn-success">แสดง</a>
-                    <a href="edit/post/{{ $post->id }}" class="btn btn-info">แก้ไข</a>
-                    <a href="delete/post/{{ $post->id }}" class="btn btn-danger">ลบ</a>
+                    <a href="show/info/{{ $info->id }}" class="btn btn-success">แสดง</a>
+                    <a href="edit/info/{{ $info->id }}" class="btn btn-info">แก้ไข</a>
+                    <a href="delete/info/{{ $info->id }}" class="btn btn-danger">ลบ</a>
                 </td>
             </tr>
             @endforeach
-
         </tbody>
     </table>
 

@@ -41,7 +41,7 @@ class PostController extends Controller
 
         foreach ($images as $key => $img) {
             $data = base64_decode(explode(',',explode(';',$img->getAttribute('src'))[1])[1]);
-            $image_name = "/upload/" . time(). $key.'.png';
+            $image_name = "/upload/postContent/" . time(). $key.'.png';
             file_put_contents(public_path().$image_name,$data);
 
             $img->removeAttribute('src');
@@ -49,13 +49,22 @@ class PostController extends Controller
         }
         $description = $dom->saveHTML();
         
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('upload/imgCover/', $filename);
+            
+        }
         Post::create([
             'postTitle' => $request->title,
             'postContent' => $description,
+            'postCover' => $filename,
             'postBy' => 'admin'
         ]);
 
-        return redirect('/backend');
+        return redirect('/posts');
     }
 
     /**
@@ -106,13 +115,24 @@ class PostController extends Controller
         }
         $description = $dom->saveHTML();
 
-        $post->update([
+        
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('upload/imgCover/', $filename);
+            
+        }
+
+        Post::create([
             'postTitle' => $request->title,
             'postContent' => $description,
-            'postBy' => 'admin2',
+            'postCover' => $filename,
+            'postBy' => 'admin2'
         ]);
 
-        return redirect('/backend');
+        return redirect('/posts');
 
     }
 
