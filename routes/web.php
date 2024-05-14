@@ -21,14 +21,13 @@ Route::get('bill',[Controller::class,'billtemp']);
 Route::get('show/news/{id}',[Controller::class,'showPost']);
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/register', [AuthController::class, 'register'])->name('register');
+    Route::get('/user/admin/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    // Route::get('/home', [HomeController::class, 'index']);
     Route::get('/home',[BackController::class,'index']);
     Route::get('/posts',[PostController::class,'index']);
 

@@ -18,12 +18,12 @@ class AuthController extends Controller
  
         $user->name = $request->name;
         $user->username = $request->username;
-        $user->email = $request->email;
+        // $user->email = $request->email;
         $user->password = Hash::make($request->password);
  
         $user->save();
  
-        return back()->with('success', 'Register successfully');
+        return redirect('/')->with('success', 'Register successfully');
     }
  
     public function login()
@@ -34,7 +34,7 @@ class AuthController extends Controller
     public function loginPost(Request $request)
     {
         $credetials = [
-            'email' => $request->email,
+            'username' => $request->username,
             'password' => $request->password,
         ];
  
@@ -43,7 +43,7 @@ class AuthController extends Controller
             return redirect('/home')->with('success', 'Login Success');
         }
  
-        return back()->with('error', 'Error Email or Password');
+        return back()->with('error', 'Error Username or Password');
     }
  
     public function logout()
