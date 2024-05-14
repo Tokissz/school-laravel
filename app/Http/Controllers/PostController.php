@@ -61,6 +61,7 @@ class PostController extends Controller
             'postTitle' => $request->title,
             'postContent' => $description,
             'postCover' => $filename,
+            'postType' => $request->type,
             'postBy' => 'admin'
         ]);
 
@@ -118,6 +119,10 @@ class PostController extends Controller
         
         if($request->hasfile('image'))
         {
+            $destination = 'upload/imgCover/'.$post->postCover;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
             $file = $request->file('image');
             $extenstion = $file->getClientOriginalExtension();
             $filename = time().'.'.$extenstion;
@@ -125,14 +130,15 @@ class PostController extends Controller
             
         }
 
-        Post::create([
+        $post->update([
             'postTitle' => $request->title,
             'postContent' => $description,
             'postCover' => $filename,
-            'postBy' => 'admin2'
+            'postType' => $request->type,
+            'postBy' => 'admin'
         ]);
 
-        return redirect('/posts');
+        return redirect('show/post/'.$post->id);
 
     }
 

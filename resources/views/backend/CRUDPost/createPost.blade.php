@@ -15,21 +15,24 @@
                 
                 <label for="">รูปภาพปก : </label>
                 <input type="file" name="image" id="image" required>
+                
+                <br>
                 <br>
                 <label for="">ประเภท:</label>
                 
-                    <select name="type" id="">
-                        <option value="1">กิจกรรมโรงเรียน</option>
-                        <option value="2">กิจกรรมนักเรียน</option>
-                        <option value="3">กิจกรรมครู</option>
-                        <option value="4">ประชาสัมพันธ์</option>
+                    <select name="type" >
+                        <option value="activity">กิจกรรมโรงเรียน</option>
+                        <option value="activityStudent">กิจกรรมนักเรียน</option>
+                        <option value="activityTeacher">กิจกรรมครู</option>
+                        <option value="news">ประชาสัมพันธ์</option>
                     </select>
-                <!-- </div> -->
                 <br>
+
                 <br>
                 <label for="">เนื้อหา : </label>
                 <textarea name="description" id="description" cols="30" rows="10" required></textarea>
                 <br>
+
                 <div class="d-grid gap-8 d-md-flex justify-content-md-end">
                     <button type="submit" class="btn btn-primary">ยืนยัน</button>
                     <a href="/posts" class="btn btn-danger">ย้อนกลับ</a>

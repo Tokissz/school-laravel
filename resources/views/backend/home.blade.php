@@ -11,6 +11,8 @@
             <tr>
                 <th scope="col">ลำดับ</th>
                 <th scope="col">หัวข้อ</th>
+                <th scope="col">วันที่สร้าง</th>
+                <th scope="col">วันที่อัปเดตล่าสุด</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -21,6 +23,8 @@
             <tr>
                 <th scope="row">{{  $loop->iteration }}</th>
                 <td>{{ $post->postTitle }}</td>
+                <td>{{ $post->created_at->format('d-m-Y') }}</td>
+                <td>{{  $post->updated_at->format('d-m-Y') }}</td>
                 <td>
                     <a href="show/post/{{ $post->id }}" class="btn btn-success">แสดง</a>
                     <a href="edit/post/{{ $post->id }}" class="btn btn-info">แก้ไข</a>
