@@ -1,9 +1,9 @@
 @include('backend.back-header')
 
 <div class="container-fluid px-4">
-    <h1 class="mt-4">กิจกรรมโรงเรียน</h1>
+    <h1 class="mt-4">กิจกรรม</h1>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="/create" class="btn btn-md btn-primary">เพิ่มกิจกรรมโรงเรียน</a>
+        <a href="/create" class="btn btn-md btn-primary">เพิ่มกิจกรรม</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">

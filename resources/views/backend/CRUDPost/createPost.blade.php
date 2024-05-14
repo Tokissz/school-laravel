@@ -5,7 +5,7 @@
     <div class="row justify-content-md-center">
         <div class="col-md-12">
             <div class="text-center">
-                <h1 class="">เพิ่มกิจกรรมโรงเรียน</h1>
+                <h1 class="">เพิ่มกิจกรรม</h1>
             </div>
             <form action="/post" method="post" enctype="multipart/form-data">
                 @csrf

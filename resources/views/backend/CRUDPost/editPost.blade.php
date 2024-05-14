@@ -4,7 +4,7 @@
     <div class="row justify-content-md-center">
         <div class="col-md-12">
             <div class="text-center">
-                <h1 class="">แก้ไขกิจกรรมโรงเรียน</h1>
+                <h1 class="">แก้ไขกิจกรรม</h1>
             </div>
             <form action="/update/post/{{ $post->id }}" method="post" enctype="multipart/form-data">
                 @csrf

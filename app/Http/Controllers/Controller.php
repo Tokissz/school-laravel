@@ -10,10 +10,10 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
-
+   
     public function index()
     {
-
+        
         $posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
 
         return view('index', compact('posts'));

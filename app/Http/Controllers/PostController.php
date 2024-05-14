@@ -7,6 +7,7 @@ use DOMDocument;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -16,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::query()->orderBy('created_at','desc')->get();
-        return view('backend.home',compact('posts'));
+        return view('backend.CRUDPost.home',compact('posts'));
     }
     
     /**
@@ -61,7 +62,7 @@ class PostController extends Controller
             'postContent' => $description,
             'postCover' => $filename,
             'postType' => $request->type,
-            'postBy' => 'admin'
+            'postBy' => Auth::user()->name
         ]);
 
         return redirect('/posts');
@@ -73,6 +74,16 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
+        if ($post->postType == 'activity') {
+            $post->postType = 'กิจกรรมโรงเรียน';
+        }elseif ($post->postType == 'activityStudent') {
+            $post->postType = 'กิจกรรมนักเรียน';
+        }elseif ($post->postType == 'activityTeacher') {
+            $post->postType = 'กิจกรรมครู';
+        }elseif ($post->postType == 'news') {
+            $post->postType = 'ประชาสัมพันธ์';
+        }
+
         return view('backend.CRUDPost.detailPost',compact('post'));
     }
 
@@ -135,7 +146,7 @@ class PostController extends Controller
             'postContent' => $description,
             'postCover' => $filename,
             'postType' => $request->type,
-            'postBy' => 'admin'
+            'postBy' => Auth::user()->name
         ]);
 
         return redirect('show/post/'.$post->id);
