@@ -19,10 +19,10 @@
                 <br>
                 <label for="">ประเภท:</label>
                     <select name="type" >
-                        <option value="activity" {{ ($post->type == 'activity') ? 'selected' : '' }}>กิจกรรมโรงเรียน</option>
-                        <option value="activityStudent" {{ ($post->type == 'activityStudent') ? 'selected' : ''}} >กิจกรรมนักเรียน</option>
-                        <option value="activityTeacher" {{  ($post->type == 'activityTeacher') ? 'selected' : ''}} >กิจกรรมครู</option>
-                        <option value="news" {{  ($post->type == 'news') ? 'selected' : ''}} >ประชาสัมพันธ์</option>
+                        <option value="activity" {{ ($post->postType == 'activity') ? 'selected' : '' }}>กิจกรรมโรงเรียน</option>
+                        <option value="activityStudent" {{ ($post->postType == 'activityStudent') ? 'selected' : ''}} >กิจกรรมนักเรียน</option>
+                        <option value="activityTeacher" {{  ($post->postType == 'activityTeacher') ? 'selected' : ''}} >กิจกรรมครู</option>
+                        <option value="news" {{  ($post->postType == 'news') ? 'selected' : ''}} >ประชาสัมพันธ์</option>
                     </select>
                 <br><br>
                 <label for="">เนื้อหา : </label>
