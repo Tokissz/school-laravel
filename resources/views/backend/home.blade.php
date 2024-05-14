@@ -7,6 +7,7 @@
     </div>         
 
     <i class="fas fa-table me-1"></i>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -34,4 +35,5 @@
     </table>
 
 </div>
+
 @include('backend.back-script')

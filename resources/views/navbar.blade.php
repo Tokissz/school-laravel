@@ -1,7 +1,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <a href="/" class="logo me-auto"><img src="{{asset('img/logo-1.png')}}" alt="" class="img-fluid"></a>
+      <a href="/" class="logo me-auto"><img src="{{asset('assets/img/logo-1.png')}}" alt="" class="img-fluid"></a>
       <h1 class="logo me-auto"><a href="/"></a></h1>
       <nav id="navbar" class="navbar">
         <ul>
