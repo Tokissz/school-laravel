@@ -5,7 +5,7 @@
       <h1 class="logo me-auto"><a href="/"></a></h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">หน้าแรก</a></li>
+          <li><a class="nav-link scrollto active" href="/">หน้าแรก</a></li>
           <li class="dropdown"><a href="#"><span>เกี่ยวกับเรา</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">ประวัติโรงเรียน</a></li>
@@ -39,7 +39,7 @@
                 </ul>
             </ul>
           </li>
-          <li><a class="nav-link scrollto " href="news">ข่าวสารและกิจกรรม</a></li>
+          <li><a class="nav-link scrollto " href="activity">ข่าวสารและกิจกรรม</a></li>
           <li class="dropdown"><a href="#"><span>แบบฟอร์ม</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">สำหรับนักเรียน</a></li>

@@ -13,14 +13,14 @@ class Controller extends BaseController
    
     public function index()
     {
-        
         $posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
         
         return view('index', compact('posts'));
     }
-    public function news()
+    public function activity()
     {
-        return view('news');
+        $posts = Post::latest()->paginate(10);
+        return view('activity', compact('posts'));
     }
     public function billtemp()
     {
