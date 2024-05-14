@@ -18,6 +18,7 @@ use App\Http\Controllers\BackController;
 Route::get('/',[Controller::class,'index']);
 Route::get('news',[Controller::class,'news']);
 Route::get('bill',[Controller::class,'billtemp']);
+Route::get('show/news/{id}',[Controller::class,'showPost']);
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [AuthController::class, 'register'])->name('register');

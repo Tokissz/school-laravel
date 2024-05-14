@@ -26,6 +26,11 @@ class Controller extends BaseController
     {
         return view('bill-temp');
     }
+    public function showPost($id)
+    {
+        $post = Post::find($id);
+        return view('details',compact('post'));
+    }
     
     
 }
