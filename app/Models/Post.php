@@ -12,6 +12,7 @@ class Post extends Model
         'postTitle',
         'postContent',
         'postCover',
+        'postType',
         'postBy'
     ];
 }
