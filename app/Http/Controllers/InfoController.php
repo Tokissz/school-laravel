@@ -109,7 +109,7 @@ class InfoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(info $info)
+    public function destroy($id)
     {
         $infos = Info::find($id);
         

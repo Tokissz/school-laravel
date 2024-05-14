@@ -83,7 +83,19 @@
                                     <img src="{{ asset('upload/imgCover/'.$post->postCover)}}" class="card__image" width="600" height="200">
                                 </div>
                                 <div class="card__body">
-                                    <span class="tag tag-blue">Technology</span>
+                                    @if ($post->postType == 'activity') 
+                                    <span class="tag tag-blue">กิจกรรม</span> 
+                                    
+                                    @elseif ($post->postType == 'news')
+                                    <span class="tag tag-blue">ประชาสัมพันธ์</span>
+
+                                    @elseif ($posts->postType == 'activityStudent')
+                                    <span class="tag tag-blue">กิจกรรมนักเรียน</span>
+
+                                    @elseif ($post->postType == 'activityTeacher')
+                                    <span class="tag tag-blue">กิจกรรมครู</span>
+                                    @endif
+                                    
                                     <h5>{{ $post->postTitle }}</h5>
                                     <!-- <div class="demo"> {!!$post->postContent!!} </div> -->
                                 </div>

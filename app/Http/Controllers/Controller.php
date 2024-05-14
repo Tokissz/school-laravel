@@ -15,7 +15,7 @@ class Controller extends BaseController
     {
         
         $posts = Post::orderBy('created_at', 'desc')->limit(3)->get();
-
+        
         return view('index', compact('posts'));
     }
     public function news()
