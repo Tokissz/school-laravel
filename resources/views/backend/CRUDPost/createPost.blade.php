@@ -2,7 +2,7 @@
 
 <div class="container p-4 ">
 
-        <div class="row justify-content-md-center">
+    <div class="row justify-content-md-center">
         <div class="col-md-12">
             <div class="text-center">
                 <h1 class="">เพิ่มกิจกรรมโรงเรียน</h1>
@@ -11,19 +11,30 @@
                 @csrf
                 <label for="">หัวข้อ : </label>
                 <input type="text" class="form-control" name="title" required>
-                
+
                 <br>
                 <label for="">รูปภาพปก : </label>
                 <input type="file" name="image" id="image" required>
                 <br>
                 <br>
+                <label for="cars">เลือกหัวข้อกิจกรรม:</label>
+
+                <select name="cars" id="cars">
+                    <option value="1">กิจกรรมโรงเรียน</option>
+                    <option value="2">กิจกรรมนักเรียน</option>
+                    <option value="3">กิจกรรมครู</option>
+                    <option value="4">ประชาสัมพันธ์</option>
+                </select>
+
+                <br>
+                <br>
                 <label for="">เนื้อหา : </label>
                 <textarea name="description" id="description" cols="30" rows="10" required></textarea>
 
-                
+
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="submit" class="btn btn-primary">ยืนยัน</button>
-                    <a  href="/posts" class="btn btn-danger">ย้อนกลับ</a>
+                    <a href="/posts" class="btn btn-danger">ย้อนกลับ</a>
                 </div>
 
             </form>
@@ -59,7 +70,7 @@
     //       ['insert', ['link', 'picture', 'video']],
     //       ['view', ['fullscreen', 'codeview', 'help']]
     //     ]
-        
+
     // });
 </script>
 

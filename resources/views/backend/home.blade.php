@@ -4,8 +4,9 @@
     <h1 class="mt-4">กิจกรรมโรงเรียน</h1>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <a href="/create" class="btn btn-md btn-primary">เพิ่มกิจกรรมโรงเรียน</a>
-    </div>
-   
+    </div>         
+
+    <i class="fas fa-table me-1"></i>
     <table class="table table-striped">
         <thead>
             <tr>

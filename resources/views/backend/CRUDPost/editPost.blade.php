@@ -6,11 +6,14 @@
             <div class="text-center">
                 <h1 class="">แก้ไขกิจกรรมโรงเรียน</h1>
             </div>
-            <form action="/update/{{ $post->id }}" method="post">
+            <form action="/update/post/{{ $post->id }}" method="post">
                 @csrf
                 <label for="">หัวข้อ : </label>
                 <input type="text" class="form-control" name="title" value="{{ $post->postTitle }}">
-
+                <br>
+                <label for="">รูปภาพปก : </label>
+                <input type="file" name="image" id="image" required>
+                
                 <label for="">เนื้อหา : </label>
                 <textarea name="description" id="description" cols="30" rows="10">{{ $post->postContent }}</textarea>
                
