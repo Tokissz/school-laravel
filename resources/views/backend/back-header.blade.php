@@ -1,9 +1,8 @@
 <head>
+    <!-- datatable -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Dashboard - SB Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/style.min.css') }}" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
 
@@ -21,6 +20,8 @@
     <!-- include summernote css/js -->
     <link href="{{ asset('assets/summernote/summernote-bs4.min.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/summernote/summernote-bs4.min.js')}}"></script>
+
+    
 
 </head>
 

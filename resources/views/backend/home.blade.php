@@ -4,11 +4,9 @@
     <h1 class="mt-4">กิจกรรมโรงเรียน</h1>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <a href="/create" class="btn btn-md btn-primary">เพิ่มกิจกรรมโรงเรียน</a>
-    </div>         
-
-    <i class="fas fa-table me-1"></i>
-
-    <table class="table table-striped">
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
         <thead>
             <tr>
                 <th scope="col">ลำดับ</th>
@@ -32,7 +30,11 @@
             @endforeach
 
         </tbody>
-    </table>
+        </table>
+    </div>
+</div>
+</div>
+</main>
 
 </div>
 

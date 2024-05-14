@@ -9,30 +9,28 @@
             </div>
             <form action="/post" method="post" enctype="multipart/form-data">
                 @csrf
-                <label for="">หัวข้อ : </label>
+                <label for="">หัวข้อ : </label> 
                 <input type="text" class="form-control" name="title" required>
-
                 <br>
+                
                 <label for="">รูปภาพปก : </label>
                 <input type="file" name="image" id="image" required>
                 <br>
-                <br>
-                <label for="cars">เลือกหัวข้อกิจกรรม:</label>
-
-                <select name="cars" id="cars">
-                    <option value="1">กิจกรรมโรงเรียน</option>
-                    <option value="2">กิจกรรมนักเรียน</option>
-                    <option value="3">กิจกรรมครู</option>
-                    <option value="4">ประชาสัมพันธ์</option>
-                </select>
-
+                <label for="">ประเภท:</label>
+                
+                    <select name="type" id="">
+                        <option value="1">กิจกรรมโรงเรียน</option>
+                        <option value="2">กิจกรรมนักเรียน</option>
+                        <option value="3">กิจกรรมครู</option>
+                        <option value="4">ประชาสัมพันธ์</option>
+                    </select>
+                <!-- </div> -->
                 <br>
                 <br>
                 <label for="">เนื้อหา : </label>
                 <textarea name="description" id="description" cols="30" rows="10" required></textarea>
-
-
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <br>
+                <div class="d-grid gap-8 d-md-flex justify-content-md-end">
                     <button type="submit" class="btn btn-primary">ยืนยัน</button>
                     <a href="/posts" class="btn btn-danger">ย้อนกลับ</a>
                 </div>
@@ -49,9 +47,10 @@
     $('#description').summernote({
         lang: 'th-TH',
         placeholder: 'description...',
-        tabsize: 2,
+        tabsize: 10,
         focus: true,
         height: 500,
+        width: 1100,
     });
     // $('#description').summernote({
     //     lang: 'th-TH',
