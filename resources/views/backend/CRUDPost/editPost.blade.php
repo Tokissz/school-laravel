@@ -18,11 +18,11 @@
                 <img src="{{ asset('upload/imgCover/'.$post->postCover) }}" width="300" height="200">
                 <br>
                 <label for="">ประเภท:</label>
-                    <select name="type" value="{{ $post->type }}">
-                        <option value="activity">กิจกรรมโรงเรียน</option>
-                        <option value="activityStudent">กิจกรรมนักเรียน</option>
-                        <option value="activityTeacher">กิจกรรมครู</option>
-                        <option value="news">ประชาสัมพันธ์</option>
+                    <select name="type" >
+                        <option value="activity" {{ ($post->type == 'activity') ? 'selected' : '' }}>กิจกรรมโรงเรียน</option>
+                        <option value="activityStudent" {{ ($post->type == 'activityStudent') ? 'selected' : ''}} >กิจกรรมนักเรียน</option>
+                        <option value="activityTeacher" {{  ($post->type == 'activityTeacher') ? 'selected' : ''}} >กิจกรรมครู</option>
+                        <option value="news" {{  ($post->type == 'news') ? 'selected' : ''}} >ประชาสัมพันธ์</option>
                     </select>
                 <br><br>
                 <label for="">เนื้อหา : </label>

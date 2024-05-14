@@ -45,7 +45,7 @@
                             <a class="nav-link" href="create">เพิ่มกิจกรรมโรงเรียน</a>
                         </nav>
                     </div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                    {{-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                         ประชาสัมพันธ์
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -55,7 +55,7 @@
                             <a class="nav-link" href="/info">ประชาสัมพันธ์</a>
                             <a class="nav-link" href="createInfo">เพิ่มประชาสัมพันธ์</a>
                         </nav>
-                    </div>
+                    </div> --}}
                     {{-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                         <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                         Pages
@@ -102,10 +102,10 @@
                         </a>  
                     </form>
                      
-                    <a class="nav-link" href="/register">
+                    {{-- <a class="nav-link" href="/register">
                         <div class="sb-nav-link-icon"><i class="fas fa-arrow"></i></div>
                         เพิ่มสมาชิก
-                    </a>  
+                    </a>   --}}
                 </div>
             </div>
             <div class="sb-sidenav-footer">

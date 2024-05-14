@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::query()->orderBy('created_at','desc')->get();
         return view('backend.home',compact('posts'));
     }
     
@@ -25,7 +25,6 @@ class PostController extends Controller
     public function create()
     {
         return view('backend.CRUDPost.createPost');
-        // return view('test.create');
     }
 
     /**
@@ -92,7 +91,6 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post = Post::find($id);
-
         $description = $request->description;
 
         $dom = new DOMDocument();
@@ -128,6 +126,8 @@ class PostController extends Controller
             $filename = time().'.'.$extenstion;
             $file->move('upload/imgCover/', $filename);
             
+        }else{
+            $filename = $post->postCover;
         }
 
         $post->update([
