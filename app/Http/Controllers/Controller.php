@@ -36,15 +36,8 @@ class Controller extends BaseController
 
     public function search(Request $request)
     {
-        // return $request;
         $searchTerm = $request->input('search');
         $searchType = $request->type;
-
-        if($searchType == 'none' && $searchTerm == null) {
-            $searchType = '';
-            $posts = Post::latest()->paginate(9);
-            return view('activity', compact('posts', 'searchType'));
-        }
 
         if ($searchTerm && $searchType) {
             $posts = Post::where('postType', 'like', '%' . $searchType . '%')
