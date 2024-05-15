@@ -33,7 +33,7 @@
                 <textarea name="description" id="description" cols="30" rows="10" required></textarea>
                 <br>
 
-                <div class="d-grid gap-8 d-md-flex justify-content-md-end">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button type="submit" class="btn btn-primary">ยืนยัน</button>
                     <a href="/posts" class="btn btn-danger">ย้อนกลับ</a>
                 </div>
