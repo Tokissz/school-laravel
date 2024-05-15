@@ -39,7 +39,7 @@
                 </ul>
             </ul>
           </li>
-          <li><a class="nav-link scrollto " href="activity">ข่าวสารและกิจกรรม</a></li>
+          <li><a class="nav-link scrollto " href="/activity">ข่าวสารและกิจกรรม</a></li>
           <li class="dropdown"><a href="#"><span>แบบฟอร์ม</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">สำหรับนักเรียน</a></li>

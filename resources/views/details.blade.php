@@ -70,11 +70,12 @@
             <h3 class="text-center">{{ $post->postTitle }}</h3>
             <hr>
         </div>
-        <div class="">
+        <div class="vh-100 w-auto p-3">
             {!! $post->postContent !!}
         </div>
     </div>
 </div>
+
 <!-- ======= Footer ======= -->
 @include('footer')
 <!-- End Footer -->

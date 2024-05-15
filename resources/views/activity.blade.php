@@ -12,16 +12,16 @@
                     <h2>กิจกรรม</h2>
                     <h1></h1>
                 </div>
-
-                <div class="row card_margin">
+                {{-- 
+                <div class="row card_margin"> --}}
+                <div class="row row-cols-1 row-cols-md-3 g-4">
                     @foreach ($posts as $post)
-                        <div class="col-lg-4 col-md-3 d-flex align-items-stretch " data-aos="zoom-in" data-aos-delay="100">
-                            <!-- <div class="icon-box iconbox-blue"> -->
-                            <div class="card ">
+                        <div class="col d-flex ">
+                            <div class="card">
                                 <a href="show/news/{{ $post->id }}">
                                     <div class="card__header">
-                                        <img src="{{ asset('upload/imgCover/' . $post->postCover) }}"
-                                            class="card__image" width="600" height="200">
+                                        <img src="{{ asset('upload/imgCover/' . $post->postCover) }}" class="card__image"
+                                            width="600" height="200">
                                     </div>
                                     <div class="card__body">
                                         @if ($post->postType == 'activity')
@@ -35,7 +35,6 @@
                                         @endif
 
                                         <h5>{{ $post->postTitle }}</h5>
-                                        <!-- <div class="demo"> {!! $post->postContent !!} </div> -->
                                     </div>
                                     <div class="card__footer">
                                         <div class="user">
@@ -45,16 +44,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- </div> -->
                                 </a>
                             </div>
                         </div>
                     @endforeach
-
-                   
                 </div>
-             <div class="d-grid gap-2 col-2 mx-auto">{{ $posts->links() }}</div></div>
 
+            </div>
+            <div class="d-grid gap-2 col-2 mx-auto">{{ $posts->links() }}</div>
         </section>
 
     </main>

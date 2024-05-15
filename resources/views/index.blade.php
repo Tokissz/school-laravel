@@ -74,11 +74,10 @@
                     <div class="section-title">
                         <h2>กิจกรรม</h2>
                     </div>
-                    <div class="row card_margin">
+                    {{-- <div class="row card_margin"> --}}
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
                         @foreach ($posts as $post)
-                            <div class="col-lg-4 col-md-3 d-flex align-items-stretch " data-aos="zoom-in"
-                                data-aos-delay="100">
-                                <!-- <div class="icon-box iconbox-blue"> -->
+                            <div class="col d-flex ">
                                 <div class="card ">
                                     <a href="show/news/{{ $post->id }}">
                                         <div class="card__header">
@@ -97,7 +96,6 @@
                                             @endif
 
                                             <h5>{{ $post->postTitle }}</h5>
-                                            <!-- <div class="demo"> {!! $post->postContent !!} </div> -->
                                         </div>
                                         <div class="card__footer">
                                             <div class="user">
@@ -107,7 +105,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- </div> -->
                                     </a>
                                 </div>
                             </div>
