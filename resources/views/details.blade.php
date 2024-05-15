@@ -4,7 +4,7 @@
     <div style="top: 50%; left: 50%; display: none;" id="dialog" class="window">
         <div id="san">
             <a href="#" class="close agree"><img src="{{ asset('assets/img/icons/close-icon.png') }} " width="25" style="float:right; margin-right: -25px; margin-top: -20px;"></a>
-            <img class="responsive" src="{{ asset('assets/img/popup/pop-up.jpg')}} ">
+            <img class="responsive" src="{{ asset('assets/img/popup/pop-up.jpg') }} ">
         </div>
     </div>
     <div style="width: 100%; font-size: 32pt; color:white; height: auto; display: none; opacity: 0.4;" id="mask">
@@ -63,14 +63,14 @@
 
     </div>
 </section>
-<div class="container p-4 ">
-    <div class="col-md-12">
+<div class="container-fluid">
+    <div class="">
         <br>
         <div class="text-center">
             <h3 class="text-center">{{ $post->postTitle }}</h3>
             <hr>
         </div>
-        <div class="vh-100 w-auto p-3">
+        <div class="min-vh-100 w-auto d-inline-block">
             {!! $post->postContent !!}
         </div>
     </div>
