@@ -7,7 +7,6 @@
     <main>
         <section id="portfolio" class="portfolio">
             <div class="container">
-
                 <div class="section-title">
                     <h2>กิจกรรม</h2>
                     <h1></h1>
@@ -17,8 +16,8 @@
                     <form action="search" method="GET" class="d-flex " enctype="multipart/form-data">
                         @csrf
                         <div class="d-flex m-2">
-                            <select class="form-select" aria-label="Default select example" name="type">
-                                <option selected value="">จัดเรียงลำดับ</option>
+                            <select class="form-select" name="type">
+                                <option selected value="none">จัดเรียงลำดับ</option>
                                 <option value="activity">กิจกรรมโรงเรียน</option>
                                 <option value="activityTeacher">กิจกรรมครู</option>
                                 <option value="activityStudent">กิจกรรมนักเรียน</option>
