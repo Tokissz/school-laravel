@@ -18,7 +18,7 @@
                         @csrf
                         <div class="d-flex m-2">
                             <select class="form-select" aria-label="Default select example" name="type">
-                                <option selected>จัดเรียงลำดับ</option>
+                                <option selected value="">จัดเรียงลำดับ</option>
                                 <option value="activity">กิจกรรมโรงเรียน</option>
                                 <option value="activityTeacher">กิจกรรมครู</option>
                                 <option value="activityStudent">กิจกรรมนักเรียน</option>
