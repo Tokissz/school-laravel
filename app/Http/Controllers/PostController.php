@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::query()->orderBy('created_at','desc')->get();
-        return view('backend.CRUDPost.home',compact('posts'));
+        return view('backend.CRUDPost.indexPost',compact('posts'));
     }
     
     /**

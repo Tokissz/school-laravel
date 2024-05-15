@@ -1,13 +1,13 @@
 @include('backend.back-header')
 
-
-
+<div class="container"></div>
+<div class="row  ml-4 mt-2">
+    <a href="/posts">
+        <h1><i class="fas fa-angle-left link-dark"></i></h1>
+    </a>
+</div>
 <div class="container p-4 ">
-    <div class="row justify-content-start">
-        <a href="/posts">
-            <h1><i class="fas fa-angle-left">ย้อนกลับ</i></h1>
-        </a>
-    </div>
+
     <div class="row justify-content-md-center">
         <div class="col-md-12">
             <div class="text-center">
@@ -29,5 +29,5 @@
         </div>
     </div>
 </div>
-
+</div>
 @include('backend.back-script')
