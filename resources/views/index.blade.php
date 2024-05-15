@@ -86,7 +86,7 @@
                                         </div>
                                         <div class="card__body">
                                             @if ($post->postType == 'activity')
-                                                <span class="tag tag-blue">กิจกรรม</span>
+                                                <span class="tag tag-blue">กิจกรรมโรงเรียน</span>
                                             @elseif ($post->postType == 'news')
                                                 <span class="tag tag-blue">ประชาสัมพันธ์</span>
                                             @elseif ($post->postType == 'activityStudent')

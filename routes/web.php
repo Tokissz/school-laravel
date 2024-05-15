@@ -19,6 +19,8 @@ Route::get('/',[Controller::class,'index']);
 Route::get('activity',[Controller::class,'activity']);
 Route::get('bill',[Controller::class,'billtemp']);
 Route::get('show/news/{id}',[Controller::class,'showPost']);
+Route::get('/search',[Controller::class,'search']);
+Route::get('/searchBy',[Controller::class,'searchBy']);
 
 
 Route::group(['middleware' => 'guest'], function () {
@@ -31,7 +33,6 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home',[BackController::class,'index']);
     Route::get('/posts',[PostController::class,'index']);
-
     Route::get('create',[PostController::class,'create']);
     Route::post('/post',[PostController::class,'store']);
     Route::get('show/post/{id}',[PostController::class,'show']);
