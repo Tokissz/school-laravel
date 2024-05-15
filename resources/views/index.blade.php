@@ -111,8 +111,9 @@
                         @endforeach
 
                     </div>
-                    <div class="d-grid gap-2 col-2 mx-auto">
-                        <a href="activity" class="btn btn-outline-primary btn-lg" type="button">กิจกรรมทั้งหมด</a>
+                    <br>
+                    <div class="d-grid gap-4 col-4 mx-auto">
+                        <a href="activity" class="btn btn-outline-primary btn-lg " type="button">กิจกรรมทั้งหมด</a>
                     </div>
                 </div>
             </section>

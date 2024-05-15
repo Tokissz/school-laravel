@@ -34,8 +34,6 @@
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('assets/css/swc.css') }}">
-
-
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
   <script src="{{ asset('assets/js/swc.js') }}"></script>
 </head>
