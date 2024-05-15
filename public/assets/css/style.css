@@ -11,14 +11,24 @@
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+* {
+  font-size: 1rem;
+}
+main {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Noto Sans Thai", sans-serif;
   color: #444444;
 }
 
 a {
+  font-size: calc(60% + 0.8vmin);
   text-decoration: none;
   color: #5cb874;
+  
 }
 
 a:hover {
@@ -14719,7 +14729,9 @@ img {
 }
 
 .user__info>small {
+  /* max-width: 80rem; */
   color: #666;
+  margin-left: 3rem;
 }
 
 .card_margin {

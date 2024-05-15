@@ -51,7 +51,8 @@
                 </div>
 
             </div>
-            <div class="d-grid gap-2 col-2 mx-auto">{{ $posts->links() }}</div>
+            ท
+            <div class="d-grid gap-2 col-2 mx-auto mt-2">{{ $posts->links() }}</div>
         </section>
 
     </main>
