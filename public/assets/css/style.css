@@ -14207,6 +14207,7 @@ fieldset:disabled .btn {
 
 html,
 body {
+  font-size: calc(60% + 0.8vmin);
   height: 100%;
 }
 
@@ -14662,16 +14663,15 @@ img {
   flex-direction: column;
   width: clamp(26rem, calc(20rem + 2vw), 20rem);
   overflow: hidden;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 0em;
   background: #FFFFFF;
   margin: 0.5rem;
-
-
 }
-
-
-
+.card:hover{ 
+  box-shadow: 1px 8px 20px grey;
+ -webkit-transition:  box-shadow .6s ease-in;
+}
 .card__body {
   padding: 1rem;
   display: flex;

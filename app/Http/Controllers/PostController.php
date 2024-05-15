@@ -35,7 +35,7 @@ class PostController extends Controller
     {
         $description = $request->description;
         $dom = new DOMDocument();
-        $dom->loadHTML( $description);
+        $dom->loadHTML( '<?xml encoding="utf-8" ?>' . $description);
 
         $images = $dom->getElementsByTagName('img');
 
@@ -105,7 +105,7 @@ class PostController extends Controller
         $description = $request->description;
 
         $dom = new DOMDocument();
-        $dom->loadHTML($description);
+        $dom->loadHTML( '<?xml encoding="utf-8" ?>' . $description);
 
         $images = $dom->getElementsByTagName('img');
 

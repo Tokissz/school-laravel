@@ -64,7 +64,7 @@
     </div>
 </section>
 <div class="container-fluid">
-    <div class="">
+    <div class="container p-4">
         <br>
         <div class="text-center">
             <h3 class="text-center">{{ $post->postTitle }}</h3>
