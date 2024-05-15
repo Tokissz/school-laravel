@@ -47,9 +47,6 @@ class Controller extends BaseController
                         ->orWhere('postContent', 'like', '%' . $searchTerm . '%');
                 })
                 ->latest()->paginate(9);
-            // ->orWhere('postContent', 'like', '%'.$searchTerm.'%')
-            // ->andWhere('postType', 'like', '%'.$searchType.'%')
-
             return view('activity', compact('posts', 'searchType'));
         }
 
@@ -57,18 +54,19 @@ class Controller extends BaseController
             $posts = Post::where('postTitle', 'like', '%' . $searchTerm . '%')
                 ->orWhere('postContent', 'like', '%' . $searchTerm . '%')
                 ->latest()->paginate(9);
+
+            return view('activity', compact('posts', 'searchType'));
         }
 
         if ($searchType) {
             $posts = Post::where('postType', 'like', '%' . $searchType . '%')
                 ->latest()->paginate(9);
-        } else {
-            $posts = Post::latest()->paginate(9);
-            return redirect('activity', compact('posts'));
-        }
-
-
-        return view('activity', compact('posts', 'searchType'));
+            return view('activity', compact('posts', 'searchType'));
+        } 
+            
+        $posts = Post::latest()->paginate(9);
+        return redirect('activity', compact('posts'));
+        
     }
 
     public function searchBy(Request $request)
