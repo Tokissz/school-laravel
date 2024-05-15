@@ -2,12 +2,12 @@
     <!-- datatable -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="{{ asset('assets/css/style.min.css') }}" rel="stylesheet">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- <link href="{{ asset('assets/css/backend/style.min.css') }}" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script> -->
 
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/backend/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/swc.css') }}">
 
     <!-- include libraries(jQuery, bootstrap) -->

@@ -8,7 +8,7 @@
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <div class="section-title">
-                    <h2>กิจกรรม</h2>
+                    <h2>ข่าวสารและกิจกรรม</h2>
                     <h1></h1>
                 </div>
 

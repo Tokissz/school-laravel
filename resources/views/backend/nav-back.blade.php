@@ -1,6 +1,5 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="/home">Test</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -28,12 +27,12 @@
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
-                    <div class="sb-sidenav-menu-heading"></div>
+                    <center><div class="sb-sidenav-menu-heading mt-2"><img src="{{asset('assets/img/logo.png')}} "width="50" height="50" alt="" class="img-fluid"></div></center>
                     <a class="nav-link" href="/home">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         หน้าแรก
                     </a>
-                    <div class="sb-sidenav-menu-heading">Interface</div>
+                    <div class="sb-sidenav-menu-heading">Menu</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                         กิจกรรม
@@ -97,7 +96,7 @@
                         @csrf
                         @method('DELETE')
                         <a class="nav-link" id="Logout">
-                            <div class="sb-nav-link-icon" ><i class="fas fa-arrow"></i></div>
+                            <div class="sb-nav-link-icon" ><i class="fa-solid fa-right-from-bracket"></i></div>
                             ออกจากระบบ
                         </a>  
                     </form>
