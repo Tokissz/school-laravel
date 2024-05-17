@@ -13,6 +13,7 @@ class Post extends Model
         'postContent',
         'postCover',
         'postType',
-        'postBy'
+        'postBy',
+        'postGroup'
     ];
 }

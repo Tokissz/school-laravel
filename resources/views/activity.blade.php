@@ -71,10 +71,18 @@
                                         <h5>{{ $post->postTitle }}</h5>
                                     </div>
                                     <div class="card__footer">
-                                        <div class="user">
-                                            <div class="user__info">
-                                                <small>{{ \Carbon\Carbon::parse($post->created_at)->locale('th')->isoFormat('LL') }}
-                                                </small>
+                                        <div class="d-flex justify-content-between mx-3 mb-2">
+                                            <div class="group ">
+                                                <div class="user__info">
+                                                    <small> {{ $post->postGroup }}
+                                                    </small>
+                                                </div>
+                                            </div>
+                                            <div class="user ml-auto " >
+                                                <div class="user__info">
+                                                    <small>{{ \Carbon\Carbon::parse($post->created_at)->locale('th')->isoFormat('LL') }}
+                                                    </small>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

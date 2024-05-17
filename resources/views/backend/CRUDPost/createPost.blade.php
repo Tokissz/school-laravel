@@ -27,6 +27,10 @@
                         <option value="news">ประชาสัมพันธ์</option>
                     </select>
                 <br>
+                <br>
+                <label for="">กลุ่มสาระ :</label> 
+                <input type="text" class="form-control" name="group" required>
+                <br>
 
                 <br>
                 <label for="">เนื้อหา : </label>

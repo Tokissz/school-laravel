@@ -62,7 +62,9 @@ class PostController extends Controller
             'postContent' => $description,
             'postCover' => $filename,
             'postType' => $request->type,
+            'postGroup' => $request->group,
             'postBy' => Auth::user()->name
+            
         ]);
 
         return redirect('/posts');
@@ -146,6 +148,7 @@ class PostController extends Controller
             'postContent' => $description,
             'postCover' => $filename,
             'postType' => $request->type,
+            'postGroup' => $request->group,
             'postBy' => Auth::user()->name
         ]);
 

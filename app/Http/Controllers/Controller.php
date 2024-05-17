@@ -77,4 +77,6 @@ class Controller extends BaseController
 
         return view('activity', compact('posts'));
     }
+
+    
 }

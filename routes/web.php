@@ -22,7 +22,6 @@ Route::get('show/news/{id}',[Controller::class,'showPost']);
 Route::get('/search',[Controller::class,'search']);
 Route::get('/searchBy',[Controller::class,'searchBy']);
 
-
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/user/admin/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerPost'])->name('register');

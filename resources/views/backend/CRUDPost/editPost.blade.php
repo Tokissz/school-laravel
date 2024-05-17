@@ -27,7 +27,12 @@
                         กิจกรรมครู</option>
                     <option value="news" {{ $post->postType == 'news' ? 'selected' : '' }}>ประชาสัมพันธ์</option>
                 </select>
-                <br><br>
+                <br>
+                <br>
+                <label for="">กลุ่มสาระ :</label> 
+                <input type="text" class="form-control" name="group" value="{{ $post->postGroup }}" required>
+                <br>
+                
                 <label for="">เนื้อหา : </label>
                 <textarea name="description" id="description" cols="30" rows="10">{{ $post->postContent }}</textarea>
 

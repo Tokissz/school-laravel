@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('postCover');
             $table->longText('postContent');
             $table->string('postType');
+            $table->string('postGroup');
             $table->string('postBy');
             $table->timestamps();
         });

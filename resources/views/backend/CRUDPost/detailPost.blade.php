@@ -16,6 +16,10 @@
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <div>ประเภท : {{ $post->postType }} </div>
+                <br>
+                <div>
+                    กลุ่มสาระ : {{ $post->postGroup}}
+                </div>
             </div>
             <br>
             <label for="">รูปภาพปก : </label>
