@@ -67,7 +67,7 @@
     $('#deleteModalToggle').on('show.bs.modal', function(event) {
         var button = $(event.relatedTarget);
         console.log(button.data('post-id'));
-        $('#deletePostForm').attr('action', 'delete/post/' + button.data('post-id'));
+        $('#deleteUserForm').attr('action', 'delete/post/' + button.data('post-id'));
     });
 </script>
 @include('backend.back-script')
