@@ -30,7 +30,7 @@
                             <a href="edit/post/{{ $post->id }}" class="btn btn-info">แก้ไข</a>
                             {{-- <a href="delete/post/{{ $post->id }}" class="btn btn-danger" name="delete">ลบ</a> --}}
                             <a class="btn btn-danger" data-bs-toggle="modal" href="#deleteModalToggle"
-                                role="button">ลบ</a>
+                                data-post-id="{{ $post->id }}" role="button">ลบ</a>
                         </td>
                     </tr>
                 @endforeach
@@ -40,25 +40,34 @@
         <div class="modal fade" id="deleteModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
             tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalToggleLabel">ยืนยันการลบกิจกรรม</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <form id="deleteUserForm" method="GET">
+                    @csrf
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">ยืนยันการลบกิจกรรม</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ต้องการลบกิจกรรมใช่หรือไม่
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" type="submit">ยืนยัน</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        ต้องการลบกิจกรรมใช่หรือไม่
-                    </div>
-                    <div class="modal-footer">
-                        <a class="btn btn-danger" href="delete/post/{{ $post->id }}">ยืนยัน</a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-</div>
 </main>
 
 </div>
-
+<script>
+    $('#deleteModalToggle').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget);
+        console.log(button.data('post-id'));
+        $('#deletePostForm').attr('action', 'delete/post/' + button.data('post-id'));
+    });
+</script>
 @include('backend.back-script')
