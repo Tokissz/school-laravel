@@ -23,8 +23,6 @@ Route::get('/search',[Controller::class,'search']);
 Route::get('/searchBy',[Controller::class,'searchBy']);
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/user/admin/register', [AuthController::class, 'register'])->name('register');
-    Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
 });
@@ -38,16 +36,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('edit/post/{id}',[PostController::class,'edit']);
     Route::put('update/post/{id}',[PostController::class,'update']);
     Route::get('delete/post/{id}',[PostController::class,'destroy']);
-
-    Route::get('/info',[InfoController::class,'index']);
-    Route::get('/createInfo',[InfoController::class,'create']);
-    Route::post('/storeInfo',[InfoController::class,'store']);
-    Route::get('show/info/{id}',[InfoController::class,'show']);
-    Route::get('edit/info/{id}',[InfoController::class,'edit']);
-    Route::post('update/info/{id}',[InfoController::class,'update']);
-    Route::get('delete/{id}',[InfoController::class,'destroy']);
-
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/user/admin/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
 });
 
 
