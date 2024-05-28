@@ -26,69 +26,59 @@
                         </div>
 
                         <div class="d-flex m-2">
-                            <input class="form-control me-2" type="text" name="search" placeholder="Search"
-                                aria-label="Search">
+                            <input class="form-control me-2" type="text" name="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </div>
                     </form>
                 </div>
 
                 <div>
-                   
+
                     @if ($searchType == 'activity')
-                        <h4>กิจกรรมโรงเรียน</h4>
+                    <h4>กิจกรรมโรงเรียน</h4>
                     @elseif ($searchType == 'news')
-                        <h4>ประชาสัมพันธ์</h4>
+                    <h4>ประชาสัมพันธ์</h4>
                     @elseif ($searchType == 'activityStudent')
-                        <h4>กิจกรรมนักเรียน</h4>
+                    <h4>กิจกรรมนักเรียน</h4>
                     @elseif ($searchType == 'activityTeacher')
-                        <h4>กิจกรรมครู</h4>
+                    <h4>กิจกรรมครู</h4>
                     @else <h4></h4>
                     @endif
                 </div>
 
 
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    @foreach ($posts as $post)
-                        <div class="col d-flex ">
-                            <div class="card">
-                                <a href="show/news/{{ $post->id }}">
-                                    <div class="card__header">
-                                        <img src="{{ asset('upload/imgCover/' . $post->postCover) }}"
-                                            class="card__image" width="600" height="200">
-                                    </div>
-                                    <div class="card__body">
-                                        @if ($post->postType == 'activity')
-                                            <span class="tag tag-blue">กิจกรรมโรงเรียน</span>
-                                        @elseif ($post->postType == 'news')
-                                            <span class="tag tag-blue">ประชาสัมพันธ์</span>
-                                        @elseif ($post->postType == 'activityStudent')
-                                            <span class="tag tag-blue">กิจกรรมนักเรียน</span>
-                                        @elseif ($post->postType == 'activityTeacher')
-                                            <span class="tag tag-blue">กิจกรรมครู</span>
-                                        @endif
+                <div class="row row-cols-1 row-cols-md-3 g-4 ">
+                    @foreach ($posts as $post )
 
-                                        <h5>{{ $post->postTitle }}</h5>
+                    <div class="col">
+                        <a href="show/news/{{ $post->id }}">
+                            <div class="card">
+                                <img src="{{ asset('upload/imgCover/' . $post->postCover) }}" class="card-img-top" style="height: 18rem; display: block; object-fit: cover;" alt="...">
+                                <div class="card-body">
+                                    @if ($post->postType == 'activity')
+                                    <span class="badge rounded-pill bg-primary">กิจกรรมโรงเรียน</span>
+                                    @elseif ($post->postType == 'news')
+                                    <span class="badge rounded-pill bg-primary">ประชาสัมพันธ์</span>
+                                    @elseif ($post->postType == 'activityStudent')
+                                    <span class="badge rounded-pill bg-primary">กิจกรรมนักเรียน</span>
+                                    @elseif ($post->postType == 'activityTeacher')
+                                    <span class="badge rounded-pill bg-primary">กิจกรรมครู</span>
+                                    @endif
+
+                                    <h5 class="card-title mt-2">{{$post->postTitle}}</h5>
+                                    <p class="card-text"></p>
+                                </div>
+                                <div class="d-flex justify-content-between mx-3 mb-2">
+                                    <div>
+                                        <p class="card-text"><small class="text-muted">{{ $post->postGroup }}</small></p>
                                     </div>
-                                    <div class="card__footer">
-                                        <div class="d-flex justify-content-between mx-3 mb-2">
-                                            <div class="group ">
-                                                <div class="user__info">
-                                                    <small> {{ $post->postGroup }}
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="user ml-auto " >
-                                                <div class="user__info">
-                                                    <small>{{ \Carbon\Carbon::parse($post->created_at)->locale('th')->isoFormat('LL') }}
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div>
+                                        <p class="card-text"><small class="text-muted">{{ \Carbon\Carbon::parse($post->created_at)->locale('th')->isoFormat('LL') }}</small></p>
                                     </div>
-                                </a>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
                     @endforeach
                 </div>
 

@@ -1505,7 +1505,8 @@ section {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 
-img {
+
+.card__image {
   max-width: 100%;
   display: block;
   object-fit: cover;
@@ -1523,7 +1524,7 @@ img {
   margin: 0.5rem;
 }
 
-.card:hover {
+.card1:hover {
   box-shadow: 1px 8px 20px grey;
   -webkit-transition: box-shadow .6s ease-in;
 }
@@ -1638,10 +1639,15 @@ a {
   color: black;
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .column {
     width: 100%;
     display: block;
     margin-bottom: 10px;
   }
+} */
+.wrapper-main {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
 }

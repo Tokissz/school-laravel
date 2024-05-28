@@ -1,5 +1,6 @@
 @include('header')
 @include('navbar')
+<link href="{{asset('assets/css/style.css') }}" rel="stylesheet">
 <div id="boxes">
     <div style="top: 50%; left: 50%; display: none;" id="dialog" class="window">
         <div id="san">
@@ -26,49 +27,39 @@
                         <h2>กิจกรรม</h2>
                     </div>
                     {{-- <div class="row card_margin"> --}}
-                    <div class="row row-cols-1 row-cols-md-3 g-4 ">
-                        @foreach ($posts as $post)
-                        <div class="col d-flex ">
-                            <div class="card ">
-                                <a href="show/news/{{ $post->id }}">
-                                    <div class="card__header">
-                                        <img src="{{ asset('upload/imgCover/' . $post->postCover) }}" class="card__image" width="600" height="200">
-                                    </div>
-                                    <div class="card__body">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 .wrapper-main">
+                        @foreach ($posts as $post )
+
+                        <div class="col">
+                            <a href="show/news/{{ $post->id }}">
+                                <div class="card">
+                                    <img src="{{ asset('upload/imgCover/' . $post->postCover) }}" class="card-img-top" style="height: 18rem; display: block; object-fit: cover;" alt="...">
+                                    <div class="card-body">
                                         @if ($post->postType == 'activity')
-                                        <span class="tag tag-blue">กิจกรรมโรงเรียน</span>
+                                        <span class="badge rounded-pill bg-primary">กิจกรรมโรงเรียน</span>
                                         @elseif ($post->postType == 'news')
-                                        <span class="tag tag-blue">ประชาสัมพันธ์</span>
+                                        <span class="badge rounded-pill bg-primary">ประชาสัมพันธ์</span>
                                         @elseif ($post->postType == 'activityStudent')
-                                        <span class="tag tag-blue">กิจกรรมนักเรียน</span>
+                                        <span class="badge rounded-pill bg-primary">กิจกรรมนักเรียน</span>
                                         @elseif ($post->postType == 'activityTeacher')
-                                        <span class="tag tag-blue">กิจกรรมครู</span>
+                                        <span class="badge rounded-pill bg-primary">กิจกรรมครู</span>
                                         @endif
 
-                                        <h5>{{ $post->postTitle }}</h5>
+                                        <h5 class="card-title mt-2" style="max-width: 400px; white-space: nowrap; overflow: hidden !important;text-overflow: ellipsis;">{{$post->postTitle}}</h5>
+                                        <p class="card-text"></p>
                                     </div>
-                                    <div class="card__footer">
-                                        <div class="d-flex justify-content-between mx-3 mb-2">
-                                            <div class="group ">
-                                                <div class="user__info">
-                                                    <small> {{ $post->postGroup }}
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="user ml-auto " >
-                                                <div class="user__info">
-                                                    <small>{{ \Carbon\Carbon::parse($post->created_at)->locale('th')->isoFormat('LL') }}
-                                                    </small>
-                                                </div>
-                                            </div>
+                                    <div class="d-flex justify-content-between mx-3 mb-2">
+                                        <div>
+                                            <p class="card-text"><small class="text-muted">{{ $post->postGroup }}</small></p>
+                                        </div>
+                                        <div>
+                                            <p class="card-text"><small class="text-muted">{{ \Carbon\Carbon::parse($post->created_at)->locale('th')->isoFormat('LL') }}</small></p>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
-
                         @endforeach
-
                     </div>
                     <br>
                     <div class="d-grid gap-4 col-4 mx-auto">

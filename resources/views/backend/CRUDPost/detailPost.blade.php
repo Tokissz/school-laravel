@@ -26,7 +26,7 @@
             <img src="{{ asset('upload/imgCover/' . $post->postCover) }} " width="300" height="200">
             <br>
 
-            <div>
+            <div class="min-vh-100 w-auto d-inline-block text-center">
                 {!! $post->postContent !!}
             </div>
 
