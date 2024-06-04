@@ -57,14 +57,15 @@ class PostController extends Controller
             $file->move('upload/imgCover/', $filename);
             
         }
-        Post::create([
+
+        $post = new Post;
+        $post->create([
             'postTitle' => $request->title,
             'postContent' => $description,
             'postCover' => $filename,
             'postType' => $request->type,
             'postGroup' => $request->group,
             'postBy' => Auth::user()->name
-            
         ]);
 
         return redirect('/posts');
