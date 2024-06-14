@@ -48,7 +48,7 @@
     </div>
 </div>
 
-<script src="{{ asset('assets/summernote/lang/summernote-th-TH.js')}}"></script>
+<script src="{{ asset('assets/summernote/lang/summernote-th-TH.js') }}"></script>
 
 <script>
     $('#description').summernote({
@@ -59,25 +59,6 @@
         height: 500,
         width: 1100,
     });
-    // $('#description').summernote({
-    //     lang: 'th-TH',
-    //     placeholder: 'description...',
-    //     tabsize: 2,
-    //     height: 300,                 // set editor height
-    //     minHeight: null,             // set minimum height of editor
-    //     maxHeight: null,             // set maximum height of editor
-    //     focus: true,
-    //     toolbar: [
-    //       ['style', ['style']],
-    //       ['font', ['bold', 'underline', 'clear']],
-    //       ['color', ['color']],
-    //       ['para', ['ul', 'ol', 'paragraph']],
-    //       ['table', ['table']],
-    //       ['insert', ['link', 'picture', 'video']],
-    //       ['view', ['fullscreen', 'codeview', 'help']]
-    //     ]
-
-    // });
 </script>
 
 @include('backend.back-script')
