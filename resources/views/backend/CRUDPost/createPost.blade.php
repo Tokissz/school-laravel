@@ -64,7 +64,6 @@
             ['height', ['height']],
             ['codeview', ['codeview']]
         ],
-        fontSizes: ['12', '16', '18', '24'], //here set the font size options you want
         lang: 'th-TH',
         placeholder: 'description...',
         tabsize: 20,

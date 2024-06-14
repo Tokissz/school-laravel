@@ -35,6 +35,8 @@ class PostController extends Controller
     {
         $description = $request->description;
         $dom = new DOMDocument();
+        //ignore warnings by default from  loadHTML DOMDocument
+        $previously = libxml_use_internal_errors(true);
         $dom->loadHTML( '<?xml encoding="utf-8" ?>' . $description);
 
         $images = $dom->getElementsByTagName('img');
@@ -57,6 +59,12 @@ class PostController extends Controller
             $file->move('upload/imgCover/', $filename);
             
         }
+
+        /* @var LibXMLError[] $xmlErrors */
+        $xmlErrors = libxml_get_errors();
+        unset($xmlErrors);
+        libxml_clear_errors();
+        libxml_use_internal_errors($previously);
 
         $post = new Post;
         $post->create([
@@ -108,6 +116,7 @@ class PostController extends Controller
         $description = $request->description;
 
         $dom = new DOMDocument();
+        //ignore warnings by default from  loadHTML DOMDocument
         $previously = libxml_use_internal_errors(true);
         $dom->loadHTML( '<?xml encoding="utf-8" ?>' . $description);
 
