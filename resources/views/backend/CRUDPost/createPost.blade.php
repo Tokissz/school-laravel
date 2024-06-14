@@ -50,14 +50,29 @@
 
 <script src="{{ asset('assets/summernote/lang/summernote-th-TH.js') }}"></script>
 
+
 <script>
     $('#description').summernote({
+
+        toolbar: [
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['font', ['strikethrough']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['insert', ['link', 'picture', 'video']],
+            ['height', ['height']],
+            ['codeview', ['codeview']]
+        ],
+        fontSizes: ['12', '16', '18', '24'], //here set the font size options you want
         lang: 'th-TH',
         placeholder: 'description...',
-        tabsize: 10,
+        tabsize: 20,
         focus: true,
         height: 500,
         width: 1100,
+        minHeight: null, // set minimum height of editor
+        maxHeight: null,
     });
 </script>
 
