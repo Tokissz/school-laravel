@@ -14,12 +14,12 @@
 
 
 <!-- ======= Hero Section ======= -->
-@include ('banner')
+ @include ('banner')
 <!-- End Hero -->
 
-<main id="main">
+ <main id="main"> 
     <!-- ======= news ======= -->
-    <div class="row">
+     <div class="row">
         <div class="container">
             <section id="services" class="services">
                 <div class="container">
@@ -27,13 +27,13 @@
                         <h2>กิจกรรม</h2>
                     </div>
                     {{-- <div class="row card_margin"> --}}
-                    <div class="row row-cols-1 row-cols-md-3 g-4 .wrapper-main">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 ">
                         @foreach ($posts as $post )
 
                         <div class="col">
                             <a href="show/news/{{ $post->id }}">
                                 <div class="card">
-                                    <img src="{{ asset('upload/imgCover/' . $post->postCover) }}" class="card-img-top" style="height: 18rem; display: block; object-fit: cover;" alt="...">
+                                    <img src="{{ asset('upload/imgCover/' . $post->postCover) }}" class="card-img-top"style="height: 18rem; display: block; object-fit: cover;"  alt="...">
                                     <div class="card-body">
                                         @if ($post->postType == 'activity')
                                         <span class="badge rounded-pill bg-primary">กิจกรรมโรงเรียน</span>
@@ -45,7 +45,7 @@
                                         <span class="badge rounded-pill bg-primary">กิจกรรมครู</span>
                                         @endif
 
-                                        <h5 class="card-title mt-2" style="max-width: 400px; white-space: nowrap; overflow: hidden !important;text-overflow: ellipsis;">{{$post->postTitle}}</h5>
+                                        <h5 class="card-title mt-2" style="font-family:Arial">{{$post->postTitle}}</h5>
                                         <p class="card-text"></p>
                                     </div>
                                     <div class="d-flex justify-content-between mx-3 mb-2">
@@ -66,11 +66,11 @@
                         <a href="activity" class="btn btn-outline-primary btn-lg " type="button">กิจกรรมทั้งหมด</a>
                     </div>
                 </div>
-            </section>
+            </section> 
 
             <!-- ======= news ======= -->
 
-            <section id="services" class="services">
+             <section id="services" class="services">
                 <div class="container">
                     <div class="section-title">
                         <h2>บริการ</h2>
@@ -95,7 +95,7 @@
 
                         <div class="ccol-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                             <div class="icon-box iconbox-orange ">
-                                <a href="bill-temp.html">
+                                <a href="https://sb.schoolbillingdev31.com/SBMCPD/Pages/PrintReportPayInForStudent.aspx">
                                     <img class="icon" src="../../assets/img/icons/money.png">
                                     <div class="icon">
                                         <svg width="0" height="0" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -152,9 +152,9 @@
                             </div>
                         </div>
                     </div>
-            </section>
+            </section> 
             <!-- ======= Contact Section ======= -->
-            <section id="contact" class="contact">
+             <section id="contact" class="contact">
                 <div class="container">
 
                     <div class="section-title">
@@ -196,15 +196,14 @@
                     </div>
 
                 </div>
-            </section><!-- End Contact Section -->
+            </section>
+            <!-- End Contact Section -->
 
 
 
-</main><!-- End #main -->
+ </main> 
+<!-- End #main -->
 
 <!-- ======= Footer ======= -->
-@include('footer')
+ @include('footer') 
 <!-- End Footer -->
-</body>
-
-</html>
