@@ -40,7 +40,7 @@ class Controller extends BaseController
         $searchType = $request->type;
 
         if ($searchTerm && $searchType) {
-            $posts = Post::where('postType', 'like', '%' . $searchType . '%')
+            $posts = Post::where('postType', 'like', $searchType)
                 ->where(function ($query) use ($searchTerm) {
                     $query->where('postTitle', 'like', '%' . $searchTerm . '%')
                         ->orWhere('postContent', 'like', '%' . $searchTerm . '%');
@@ -58,7 +58,7 @@ class Controller extends BaseController
         }
 
         if ($searchType) {
-            $posts = Post::where('postType', 'like', '%' . $searchType . '%')
+            $posts = Post::where('postType', 'like', $searchType )
                 ->latest()->paginate(9);
             return view('activity', compact('posts', 'searchType'));
         } 
@@ -72,7 +72,7 @@ class Controller extends BaseController
         // return $request;
         $searchType = $request->input('type');
 
-        $posts = Post::where('postType', 'like', '%' . $searchType . '%')
+        $posts = Post::where('postType', 'like', $searchType)
             ->latest()->paginate(9);
 
         return view('activity', compact('posts'));
