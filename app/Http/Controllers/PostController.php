@@ -169,7 +169,7 @@ class PostController extends Controller
             'postBy' => Auth::user()->name
         ]);
 
-        return redirect('show/post/'.$post->id);
+        return redirect('/posts');
 
     }
 
